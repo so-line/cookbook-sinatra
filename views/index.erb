@@ -1,0 +1,16 @@
+<h1>
+  Here are all your <em><mark>recipes</mark></em>!
+</h1>
+<p> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </p>
+
+<% @recipes.each do |recipe| %>
+  <h4><mark><%= recipe.name %></mark></h4>
+  <p><%= recipe.description %></p>
+  <p><em> Rating :  <%= recipe.rating %>/5.0   - - -    Prep Time : <%= recipe.preptime %> mins </em></p>
+  <%# <a class="destroy" href="/destroy"><small><i>delete this recipe</i></small></a> %>
+  <p> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </p>
+<% end %>
+
+<a class="new recipe" href="/new"><h5>Add a new recipe here!</h5></a>
+
+<%= Time.now %>

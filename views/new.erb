@@ -1,0 +1,16 @@
+<h3>
+  Let's add a <mark> new recipe</mark>:
+</h3>
+<p> ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ </p>
+
+<form action="/new" method="post">
+  Recipe Name: <input type="text" name="name" value="<%= @name %>"><br>
+  <br>
+  Description: <input type="text" name="description" value="<%= @description %>"><br>
+  <br>
+  Rating <em>(/5)</em>: <input type="text" name="rating" value="<%= @rating %>"><br>
+  <br>
+  Prep Time <em>(mins)</em>: <input type="text" name="preptime" value="<%= @preptime %>"><br>
+  <br>
+  <input type="submit">
+</form>
