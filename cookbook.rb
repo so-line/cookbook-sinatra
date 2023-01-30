@@ -23,8 +23,8 @@ class Cookbook
     end
   end
 
-  def destroy(recipe)
-    @recipes.delete(recipe)
+  def destroy(recipe_index)
+    @recipes.delete_at(recipe_index)
     CSV.open(@csv_file_path, "wb") do |csv|
       @recipes.each do |recipe|
         csv << [recipe.name, recipe.description, recipe.rating, recipe.preptime]
